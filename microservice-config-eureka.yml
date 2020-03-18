@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active: dev
+
+---
+
+server:
+  port: 6001
+
+spring:
+  profiles: dev
+  application:
+    name: microservice-config-eureka
+
+eureka:
+  client:
+    register-with-eureka: false #服务注册开关
+    fetch-registry: false #服务发现开关
+    service-url: #注册到哪个Eureka服务注册中心，多个中间用逗号分隔
+      defaultZone: http://127.0.0.1:6001/eureka/
+  server:
+    enable-self-preservation: false
+
+  instance:
+    hostname: 127.0.0.1
+
+---
+server:
+  port: 6001
+
+spring:
+  profiles: dev
+  application:
+    name: microservice-config-eureka
+
+eureka:
+  client:
+    register-with-eureka: false #服务注册开关
+    fetch-registry: false #服务发现开关
+    service-url: #注册到哪个Eureka服务注册中心，多个中间用逗号分隔
+      defaultZone: http://127.0.0.1:6001/eureka/
+  server:
+    enable-self-preservation: true
+
+  instance:
+    hostname: 127.0.0.1
