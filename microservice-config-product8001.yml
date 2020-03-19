@@ -37,8 +37,7 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}  #服务端 status 显示格式
     prefer-ip-address: true #访问路径会显示ip地址
 emp:
-    name:zhangsan
-
+    name: zhangsan
 ---
 server:
   port: 8001
